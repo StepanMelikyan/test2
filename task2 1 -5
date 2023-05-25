@@ -1,0 +1,35 @@
+1. Используя команду cat в терминале операционной системы Linux, создать
+два файла Домашние животные (заполнив файл собаками, кошками,
+хомяками) и Вьючные животными заполнив файл Лошадьми, верблюдами и
+ослы), а затем объединить их. Просмотреть содержимое созданного файла.
+Переименовать файл, дав ему новое имя (Друзья человека).
+
+st@st-VirtualBox:~/cwork$ cat h_enimals
+st@st-VirtualBox:~/cwork$ cat > v_enimals
+st@st-VirtualBox:~/cwork$ cat h_enimals v_enimals > mans_friends
+
+
+2. Создать директорию, переместить файл туда.
+
+st@st-VirtualBox:~/cwork$ mkdir new_dir
+st@st-VirtualBox:~/cwork$ sudo su
+root@st-VirtualBox:/home/st/cwork# mv mans_friends /new_dir
+
+3. Подключить дополнительный репозиторий MySQL. Установить любой пакет
+из этого репозитория.
+
+root@st-VirtualBox://home/st/cwork/new_dir# sudo wget https://dev.mysql.com/get/mysql-apt-config_0.8.23-1_all.deb
+root@st-VirtualBox://home/st/cwork/new_dir# sudo dpkg -i mysql-apt-config_0.8.23-1_all.deb
+root@st-VirtualBox://home/st/cwork/new_dir# sudo apt-get update
+root@st-VirtualBox://home/st/cwork/new_dir# sudo apt-get install mysql-server
+root@st-VirtualBox://home/st/cwork/new_dir# systemctl status mysql
+
+4. Установить и удалить deb-пакет с помощью dpkg.
+
+
+st@st-VirtualBox:~/cwork$ sudo wget https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/docker-ce-cli_20.10.13~3-0~ubuntu-jammy_amd64.deb
+st@st-VirtualBox:~/cwork$ sudo dpkg -i docker-ce-cli_20.10.133-0ubuntu-jammy_amd64.deb
+st@st-VirtualBox:~/cwork$sudo dpkg -r docker-ce-cli
+
+5. Выложить историю команд в терминале ubuntu
+
